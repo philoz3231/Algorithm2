@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.junho.algorithm2.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="7dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="# of cards"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/editText3" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Compare"
+            android:textSize="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editText3"
+            android:layout_toEndOf="@+id/editText3" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Quick"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button"
+            android:layout_alignTop="@+id/button9" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Heap"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:layout_alignBaseline="@+id/button10"
+            android:layout_alignBottom="@+id/button10"
+            android:layout_toLeftOf="@+id/button10"
+            android:layout_toStartOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button9"
+            android:layout_toStartOf="@+id/button9"
+            android:text="Merge" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Insert"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button7"
+            android:layout_toStartOf="@+id/button7" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Bubble"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button6"
+            android:layout_toStartOf="@+id/button6" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/result_textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+</android.support.constraint.ConstraintLayout>
