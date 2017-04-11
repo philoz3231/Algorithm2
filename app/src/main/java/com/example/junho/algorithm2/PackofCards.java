@@ -231,9 +231,36 @@ public class PackofCards {
 
 
     void QuickSort(){
-
+        DoQuickSort(0, length -1);
     }
 
+    void DoQuickSort(int left, int right){
+        int next = left;
+        int i = left;
+        int j = right;
+        Card tmpCard = new Card(0, 1);
 
+        while(i <= j){
+            while(CardCompare(pack[next], pack[i])){
+                i++;
+            }
+            while(CardCompare(pack[j], pack[next])) {
+                j--;
+            }
+            if( i <= j){
+                tmpCard = pack[i];
+                pack[i] = pack[j];
+                pack[j] = tmpCard;
+                i++;
+                j--;
+            }
+        }
+        if(left < j){
+            DoQuickSort(left, j);
+        }
+        if(i < right){
+            DoQuickSort(i, right);
+        }
+    }
 
 }
