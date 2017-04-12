@@ -64,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
 
                     result_textView1.setText("Your input: " + cards1.length + "\n"
                         + "Seed: " + seed + "\n\n"
-                            + "Bubble: " + (time1b - time1a)/1000 + " sec\n"
-                            + "Insertion: " + (time2b - time2a)/1000 + " sec\n"
-                            + "Selection: " + (time3b - time3a)/1000 + " sec\n"
-                            + "Merge: " + (time4b - time4a)/1000 + " sec\n"
-                            + "Heap: " + (time5b - time5a)/1000 + " sec\n"
-                            + "Quick: " + (time6b - time6a)/1000 + " sec\n"
+                            + "Bubble: " + (time1b - time1a)/1000. + " sec\n"
+                            + "Insertion: " + (time2b - time2a)/1000. + " sec\n"
+                            + "Selection: " + (time3b - time3a)/1000. + " sec\n"
+                            + "Merge: " + (time4b - time4a)/1000. + " sec\n"
+                            + "Heap: " + (time5b - time5a)/1000. + " sec\n"
+                            + "Quick: " + (time6b - time6a)/1000. + " sec\n"
                     );
                 } catch (Exception e){}
 

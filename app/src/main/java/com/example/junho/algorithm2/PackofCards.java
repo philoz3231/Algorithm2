@@ -32,6 +32,7 @@ public class PackofCards {
     };
     static Random rand = new Random();
     Card[] pack;
+    Card[] tempPack;
     int length;
     /*inner class of PackofCards*/
     public class Card{
@@ -49,7 +50,7 @@ public class PackofCards {
     }
 
     PackofCards(int size){
-        rand.setSeed(seed1);
+        rand.setSeed(seed3);
         pack = new Card[size];
         for(int i = 0; i <size; i++){
             pack[i] = new Card(rand.nextInt(4), rand.nextInt(13));
@@ -139,6 +140,7 @@ public class PackofCards {
         }
     }
     void MergeSort(){
+        this.tempPack = new Card[length];
         DoMergeSort(0, length - 1);
     }
 
@@ -151,30 +153,31 @@ public class PackofCards {
         }
     }
     void MergeParts(int start, int middle, int end){
-        PackofCards tmpPackofCards = new PackofCards(length);
-        for(int i = 0; i<length; i++){
-            tmpPackofCards.pack[i] = pack[i];
+
+        for(int i = start; i<= end; i++){
+            tempPack[i] = pack[i];
         }
         int i = start;
         int j = middle + 1;
         int k = start;
         while(i <= middle && j <= end){
-            if(CardCompare(tmpPackofCards.pack[j], tmpPackofCards.pack[i])){
-                pack[k] = tmpPackofCards.pack[i];
+            if(CardCompare(tempPack[j], tempPack[i])){
+                pack[k] = tempPack[i];
                 i++;
             } else{
-                pack[k] = tmpPackofCards.pack[j];
+                pack[k] = tempPack[j];
                 j++;
             }
             k++;
         }
         while(i <= middle){
-            pack[k] = tmpPackofCards.pack[i];
+            pack[k] = tempPack[i];
             k++;
             i++;
         }
+
         while(j <= end){
-            pack[k] = tmpPackofCards.pack[j];
+            pack[k] = tempPack[j];
             k++;
             j++;
         }
